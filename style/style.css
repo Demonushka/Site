@@ -1,0 +1,328 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #f9f1e4;
+  background-image:
+    linear-gradient(rgba(249, 241, 228, 0.75), rgba(180, 119, 22, 0.9)),
+    url(../img/background_fone.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+header{
+  display: flex;
+  position: fixed;
+  box-sizing: border-box;
+  top: 15px;
+  left: 2%;
+  right: 2%;
+
+  justify-content: space-between;
+  padding: 10px 2%;
+  align-items: center;
+
+  background-color: #e5ab85;
+  border-radius: 40px;
+  border: 2px solid #666;
+
+  z-index: 100;
+}
+
+nav{
+  display: flex;
+  gap: clamp(2px, 3vw, 80px);
+}
+
+a.nav{
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  align-items: center;
+  background-color: white;
+  padding: 2px clamp(8px, 2vw, 30px);
+  font-size: clamp(10px, 2vw, 20px);
+  white-space: nowrap;
+
+  border: 2px solid black;
+  border-radius: 40px;
+  transition: all 0.4s ease;
+  font-family: Pacifico;
+}
+
+a.nav:hover{
+  background-color: #e18a8575;
+}
+
+.text-in-nav{
+  color: black;
+  font-size: clamp(3px, 2vw, 20px);
+  margin: 0% 1%;
+  padding: 2px;
+  font-family: Pacifico;
+  text-align: center;
+  text-decoration: none;
+}
+
+.text-in-nav:hover{
+  color: #666;
+}
+
+.Logo-img{
+  width: clamp(280px, 85%, 740px);
+  height: auto;
+}
+
+.Logo-figure{
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: clamp(170px, 13vw, 250px);
+}
+
+.slogan{
+  font-size: clamp(24px, 6vw, 50px);
+  line-height: 1.1;
+  font-family: Pacifico, cursive;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  margin: 0 clamp(10px, 5vw, 10%);
+  margin-top: 10px;
+}
+
+.signature{
+  margin-top: -2px;
+  color: #666;
+  font-size: clamp(12px, 4vw, 25px);
+  font-family: sans-serif;
+}
+
+.slogan-and-signature{
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.heading-and-text-block{
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(150px, 14vw, 200px);
+  margin-left: 5%;
+  margin-right: 2%;
+}
+
+.text-decoration{
+  display: grid;
+  font-family: Pacifico, cursive;
+  font-size: clamp(18px, 1.6vw, 36px);
+  padding: clamp(10px, 2%, 30px);
+  gap: clamp(26px, 2vw, 40px);
+}
+
+section > h2{
+  scroll-margin-top: 100px;
+  font-size: clamp(28px, 1.7vw, 48px);
+  margin-bottom: 10px;
+  margin-left: 7%;
+  font-family: sans-serif;
+}
+
+.about{
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: #f9f1e4;
+  letter-spacing: 2px;
+  padding-left: clamp(14px, 2%, 20px);
+}
+
+.service{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  border: 2px solid black;
+  border-radius: 40px;
+  background-color: #e8dcc4aa;
+  gap: clamp(5px, 2vw, 40px);
+  padding: clamp(5px, 2vw, 40px);
+}
+
+.service :nth-child(3) {
+  grid-column: 1 / 3;
+}
+
+div > a > article > h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-size: clamp(5px, 1.1rem, 30px);
+  padding: 5px;
+  font-family: sans-serif;
+  pointer-events: none;
+}
+
+div > a > article > h3::after{
+  content: "🐾";
+  margin-left: 7px;
+  display: flex;
+  color: black;
+}
+
+.service-block:hover article > h3::after{
+  transform: rotate(20deg) scale(1.2);
+  transition: 0.3s;
+}
+
+div > a > article > p{
+  display: flex;
+  flex-grow: 1;
+  background-color: #F9F1E4;
+  padding: 20px clamp(15px, 3%, 30px);
+  color: black;
+  pointer-events: none;
+}
+
+.service-block{
+  display: block;
+  background-color: white;
+  border-radius: 25px;
+  border: 2px solid #666;
+  text-decoration: none;
+}
+
+.service-block article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.service-block:hover h3{
+  transform: scale(1.1);
+  transition: 0.3s;
+  color: black;
+}
+
+.service-head-up{
+  border-bottom: 2px solid #666;
+}
+
+.service-head-down{
+  border-top: 2px solid #666;
+}
+
+.reviews-text{
+  display: block;
+  flex-grow: 1;
+  max-height: 150px;
+  background-color: #AB8063;
+  color: white;
+  overflow: auto;
+}
+
+.reviews-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Pacifico, cursive;
+  font-size: clamp(5px, 1.2rem, 20px);
+  background-color: #E5AB85;
+  padding: clamp(3px, 2vw, 10px);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.reviews-stars{
+  display: flex;
+  background-color: white;
+  padding: 10px clamp(3px, 5%, 15px);
+  justify-content: center;
+  gap: clamp(2px, 1.5vw, 15px);
+  border-top: 2px solid #666;
+}
+
+.reviews-block{
+  display: flex;
+  flex-direction: column;
+  width: clamp(150px, 30%, 400px);
+  border-radius: 30px 30px 0 0;
+  border: 2px solid #666;
+  overflow: hidden;
+}
+
+.line-reviews{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.footer-block{
+  display: flex;
+  background-color: #fdf5e6;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  border-top: 2px solid #666;
+  border-radius: 15px 15px 0 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  gap: 10px;
+}
+
+.footer-nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fluffy-tail{
+  font-family: Pacifico, cursive;
+  font-size: clamp(6px, 5vw, 20px);
+}
+
+div > nav > a{
+  color: black;
+}
+
+div > nav > a:hover{
+  color: #666;
+}
+
+div > div > a{
+  color: black;
+}
+
+div > div > a:hover{
+  color: #666;
+}
+
+.head-catalog{
+  display: flex;
+  margin-top: clamp(170px, 13vw, 250px);
+  justify-content: center;
+  font-family: Pacifico, cursive;
+  font-size: clamp(24px, 6vw, 50px);
+}
+
+.catalog-line{
+  display: grid;
+
+}
+
+.catalog-block{
+
+}
