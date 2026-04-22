@@ -65,10 +65,8 @@ a.nav:hover{
 }
 
 .name-site-and-cat{
-  display: flex; 
-  border: 1px solid black;
+  display: flex;
   align-items: center;
-  width: 200px;
   position: relative;
 }
 
@@ -87,6 +85,8 @@ a.nav:hover{
   font-family: Pacifico;
   text-align: center;
   text-decoration: none;
+  white-space: nowrap;
+  z-index: 1;
 }
 
 .text-in-nav:hover{
@@ -350,14 +350,25 @@ div > div > a:hover{
 }
 
 @media (max-width: 768px){
-  .name-site-and-cat{
-  width: 80px;
+
+.cat-on-symb{
+  margin-bottom: 17px; 
+  margin-left: 50px;
+}
+}
+
+@media (max-width: 480px){
+  .text-in-nav{
+    white-space: normal;
+    line-height: 9px;
+    word-spacing: 100vw;
   }
 
 .cat-on-symb{
-  height: 87%;
-  position: absolute;
-  margin-bottom: 13px; 
-  margin-left: 40px;
-}
+  transform: scaleY(-1);
+  height: 60%;
+  margin-bottom: 0px;
+  margin-left: 25px;
+  margin-top: 28px;
+  }
 }
