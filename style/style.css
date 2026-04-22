@@ -116,11 +116,41 @@ a.nav:hover{
   height: auto;
 }
 
+.persik-img{
+  width: 120px;
+  position: absolute;
+  margin-left: 120%;
+  animation: persik-jump 6s ease-in-out 1 forwards;
+}
+
+@keyframes persik-jump {
+  0%   { transform: translateX(0); }
+  15%  { transform: translateX(15%); }
+
+  16%  { transform: translateX(15%); }
+  25%  { transform: translateX(-2%); }
+
+  26%  { transform: translateX(-2%)}
+  36%  { transform: translateX(-2%) scaleY(0.9); transform-origin: bottom; }
+
+  40% { transform:  scaleX(0.8); transform-origin: center;}
+  
+  50% {transform: translate(-80%, -300%);}
+  80% {transform: rotate(-20deg) translate(-87%, -280%);}
+  100% {transform: rotate(0) translate(-230%, -222%);}
+}
+
 .Logo-figure{
+  margin-left: auto;
+  margin-right: auto;
+
   display: flex;
   justify-content: center;
   align-items: end;
   margin-top: clamp(170px, 15vw, 250px);
+  max-width: 800px;
+
+  position: relative;
 }
 
 .slogan{
@@ -366,6 +396,11 @@ div > div > a:hover{
   
 }
 
+@media (max-width: 800px) {
+  .persik-img{
+    opacity: 0;
+  }
+}
 @media (max-width: 768px){ /*Планшет*/
   .cat-on-symb{
     margin-bottom: 17px; 
