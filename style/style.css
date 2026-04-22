@@ -70,11 +70,28 @@ a.nav:hover{
   position: relative;
 }
 
+.name-site-and-cat:hover .cat-on-symb{
+  animation: hi-hi 1.5s linear 1 forwards;
+}
+
 .cat-on-symb{
   height: 87%;
   position: absolute;
-  margin-bottom: 26px; 
+  margin-bottom: 0px; 
   margin-left: 70px;
+  opacity: 0;
+  transition: opacity 0.5s ease, margin-bottom 0.5s ease;
+}
+
+@keyframes hi-hi {
+  0% {
+    opacity: 0;
+    margin-bottom: 0%;
+  }
+  100% {
+    opacity: 1;
+    margin-bottom: 16%;
+  }
 }
 
 .text-in-nav{
@@ -349,26 +366,30 @@ div > div > a:hover{
   
 }
 
-@media (max-width: 768px){
-
-.cat-on-symb{
-  margin-bottom: 17px; 
-  margin-left: 50px;
+@media (max-width: 768px){ /*Планшет*/
+  .cat-on-symb{
+    margin-bottom: 17px; 
+    margin-left: 50px;
+  }
 }
-}
 
-@media (max-width: 480px){
+@media (max-width: 480px){ /*Телефон*/
   .text-in-nav{
     white-space: normal;
     line-height: 9px;
     word-spacing: 100vw;
   }
 
-.cat-on-symb{
-  transform: scaleY(-1);
-  height: 60%;
-  margin-bottom: 0px;
-  margin-left: 25px;
-  margin-top: 28px;
+  .cat-on-symb{
+    transform: scaleY(-1);
+    height: 60%;
+    margin-bottom: 0px;
+    margin-left: 25px;
+    margin-top: 28px;
+  }
+  
+  .cat-on-symb{
+    opacity: 1;
+    transition: all 1s ease;
   }
 }
